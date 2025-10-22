@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enciclopédia Livre</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <div class="logo-text">
+        <h1>Enciclopédia Livre</h1>
+        <p>A enciclopédia de todos</p>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar na Enciclopédia Livre...">
+      <button>Pesquisar</button>
+    </div>
+  </header>
+
+  <!-- Barra de navegação superior -->
+  <nav class="top-nav">
+    <ul>
+      <li class="active">Artigo</li>
+      <li>Discussão</li>
+      <li>Editar</li>
+      <li>Ver histórico</li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Barra lateral -->
+    <aside id="sidebar">
+      <button id="toggleSidebar">☰ Conteúdo</button>
+      <div class="sidebar-box">
+        <ul>
+          <li><a href="#windhoek">Página principal</a></li>
+          <li><a href="#historia">História</a></li>
+          <li><a href="#economia">Economia</a></li>
+          <li><a href="#clima">Clima</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <h2 id="windhoek">Windhoek</h2>
+
+      <!-- infobox à direita (leitura) -->
+      <aside class="infobox" aria-label="Ficha de Vinduque / Windhoek">
+        <table>
+          <caption>Vinduque / Windhoek</caption>
+          <tbody>
+            <tr>
+              <td class="image">
+                <a href="band.jpeg" target="_blank" rel="noopener">
+                  <img src="band.jpeg" alt="Selo de Vinduque">
+                </a>
+                <div class="caption">Selo</div>
+              </td>
+            </tr>
+            <tr>
+              <th>Localização</th>
+            </tr>
+            <tr>
+              <td class="image">
+                <a href="map.jpeg" target="_blank" rel="noopener">
+                  <img src="map.jpeg" alt="Mapa de Vinduque na Namíbia">
+                </a>
+                <div class="caption">Localização na Namíbia</div>
+              </td>
+            </tr>
+            <tr>
+              <th>Coordenadas</th>
+              <td>22°34′12″S 17°05′01″L</td>
+            </tr>
+            <tr>
+              <th>País</th>
+              <td><a href="#">Namíbia</a></td>
+            </tr>
+            <tr>
+              <th>Região</th>
+              <td><a href="#">Khomas</a></td>
+            </tr>
+            <tr>
+              <th>Estabelecido</th>
+              <td>18 de outubro de 1890</td>
+            </tr>
+            <tr>
+              <th>Prefeita</th>
+              <td>Agnes Mpingana Kafula</td>
+            </tr>
+            <tr>
+              <th>Área total</th>
+              <td>5 133 km²</td>
+            </tr>
+            <tr>
+              <th>População (2020)</th>
+              <td>431 000 hab.</td>
+            </tr>
+            <tr>
+              <th>Densidade</th>
+              <td>84 hab./km²</td>
+            </tr>
+            <tr>
+              <th>Fuso horário</th>
+              <td>WAT (UTC+1)</td>
+            </tr>
+            <tr>
+              <th>Horário de verão</th>
+              <td>WAST (UTC+2)</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+
+      <div class="article-body">
+        <p>Windhoek, é a capital e maior cidade da Namíbia, localizada no centro do país. O nome Windhoek é derivado da palavra afrikaans Wind-Hoek, que significa "canto do vento". Fundada em 1840 por missionários alemães, Windhoek tornou-se a capital da colônia alemã da África do Sudoeste Alemã em 1890. Após a Primeira Guerra Mundial, a cidade passou para o controle sul-africano até a independência da Namíbia em 1990. Hoje, Windhoek é o centro político, econômico e cultural do país, abrigando várias instituições governamentais, empresas e universidades.</p>
+        <p>Windhoek é conhecida por sua arquitetura colonial alemã, com edifícios históricos como a Christ Church e o Alte Feste. A cidade também é um importante centro comercial, com uma economia diversificada que inclui setores como mineração, agricultura e turismo. Windhoek oferece uma mistura única de culturas africanas e europeias, refletida em sua culinária, festivais e vida cotidiana.</p>
+        <p>Além disso, Windhoek é um ponto de partida popular para explorar as atrações naturais da Namíbia, como o Parque Nacional Etosha, o Deserto do Namibe e as dunas de Sossusvlei. A cidade também possui uma vibrante cena artística e cultural, com galerias, teatros e eventos que celebram a diversidade do país.</p>
+        <p>
+            <div class="note">
+                <strong>Nota:</strong> Windhoek é frequentemente referida como "Vinduque" em português, embora o nome original em inglês seja amplamente utilizado.
+   
+  </div>
+        </p>
+
+        <!-- nova seção: História do país -->
+        <h2 id="historia">História</h2>
+          <p>A povoação de Windhoek surgiu em meados do século XIX, quando o capitão Jan Jonker Afrikaner se estabeleceu junto a uma grande nascente de água quente, o local era o ponta de contato entre os namas e os hererós. Contudo, apenas em 1890 se fundou a cidade atual, quando o alemão Von François começou a construir um forte, que hoje é conhecido por Velha Fortaleza ("Alte Feste"). O seu desenvolvimento foi lento, apenas com alguns edifícios essenciais e pequenas explorações agrícolas, mas acelerou a partir de 1907, com a imigração de colonos de outras partes da Namíbia, da Alemanha e da África do Sul. A era colonial alemã acabou com a Primeira Guerra Mundial. Em 1915, a cidade foi ocupada por tropas sul-africanas e nos anos que se seguiram foi administrada por um governo militar sul-africano, o que provocou a sua estagnação. A seguir à Segunda Guerra Mundial, o desenvolvimento intensificou-se, e a partir de 1955 foram realizadas importantes obras públicas, incluindo escolas, hospitais, estradas e outras infraestruturas básicas. Em 1990, com a independência da Namíbia em relação à África do Sul, Windhoek torna-se a capital de um país independente e as novas oportunidades geram desenvolvimento.</p>
+
+        <!-- nova seção: Economia -->
+        <h2 id="economia">Economia</h2>
+          <p>Vinduque é o principal centro econômico da Namíbia. Como capital do país, concentra o governo, as instituições financeiras, o comércio e os principais serviços públicos e privados. A cidade é o ponto onde se tomam as decisões políticas e econômicas mais importantes, além de ser o maior centro urbano e administrativo do país.</p>
+          <p>A economia de Vinduque baseia-se principalmente no setor de serviços, que inclui administração pública, bancos, seguros, comércio e educação. A cidade também tem destaque no transporte e na logística, por estar localizada no centro do país e ligar diferentes regiões através de estradas e ferrovias. O Aeroporto Internacional Hosea Kutako facilita as conexões comerciais e turísticas com outros países.</p>
+          <p>Embora Vinduque não dependa diretamente da mineração, o setor industrial e comercial da cidade é influenciado por ela, já que muitas empresas ligadas à exportação de diamantes, urânio e outros minerais têm sedes ou escritórios na capital. Além disso, o comércio varejista e o setor de serviços crescem com o aumento da população urbana e da demanda por bens de consumo.</p>
+          <p>Em resumo, Vinduque funciona como o coração econômico da Namíbia, sustentada principalmente pelos serviços, pelo comércio e pela administração pública, enquanto setores como mineração e transporte reforçam seu papel estratégico dentro da economia nacional.</p>
+
+        <!-- nova seção: Clima -->
+        <h2 id="clima">Clima</h2>
+        <p>Vinduque possui um clima semiárido, com temperaturas agradáveis durante a maior parte do ano. Os verões são quentes, com chuvas concentradas entre dezembro e março, geralmente em forma de pancadas rápidas. Já os invernos são secos e frios à noite, mas com dias ensolarados. A cidade está localizada em uma região de altitude elevada, o que faz com que o clima seja mais ameno do que em outras áreas desérticas da Namíbia.</p>
+
+        <!-- nova seção: Galeria (apenas leitura) -->
+        <h2 id="galeria">Galeria</h2>
+        <!-- Galeria -->
+<section class="gallery">
+  <div class="image-box">
+    <a href="1.jpg" target="_blank" rel="noopener">
+      <img src="1.jpg" alt="Paisagem namibiana 1">
+    </a>
+  </div>
+  <div class="image-box">
+    <a href="2.jpg" target="_blank" rel="noopener">
+      <img src="2.jpg" alt="Paisagem namibiana 2">
+    </a>
+  </div>
+  <div class="image-box">
+    <a href="3.jpg" target="_blank" rel="noopener">
+      <img src="3.jpg" alt="Paisagem namibiana 3">
+    </a>
+  </div>
+
+  <!-- novas paisagens -->
+  <div class="image-box">
+    <a href="4.jpg" target="_blank" rel="noopener">
+      <img src="4.jpg" alt="Paisagem namibiana 4">
+    </a>
+  </div>
+  <div class="image-box">
+    <a href="5.jpeg" target="_blank" rel="noopener">
+      <img src="5.jpeg" alt="Paisagem namibiana 5">
+    </a>
+  </div>
+  <div class="image-box">
+    <a href="6.jpeg" target="_blank" rel="noopener">
+      <img src="6.jpeg" alt="Paisagem namibiana 6">
+    </a>
+  </div>
+</section>
+      </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Enciclopédia Livre. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

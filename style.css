@@ -1,0 +1,350 @@
+/* Estilo geral */
+body {
+  margin: 0;
+  font-family: "Linux Libertine", Georgia, serif;
+  background-color: #f8f9fa;
+  color: #202122;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 13px;
+  color: #54595d;
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+}
+
+.search-bar button {
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  cursor: pointer;
+}
+
+/* Navegação superior */
+.top-nav {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.top-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 5px 20px;
+  gap: 15px;
+}
+
+.top-nav li {
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+.top-nav .active {
+  font-weight: bold;
+  border-bottom: 2px solid #3366cc;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Barra lateral */
+aside {
+  width: 200px;
+  padding: 15px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  margin-bottom: 8px;
+}
+
+aside a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+aside a:hover {
+  text-decoration: underline;
+}
+
+#toggleSidebar {
+  display: none;
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  margin-bottom: 10px;
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  background-color: white;
+  border: 1px solid #a2a9b1;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+main h2 {
+  font-family: "Linux Libertine", Georgia, serif;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+}
+
+/* Infobox */
+.infobox {
+  float: right;
+  width: 250px;
+  border: 1px solid #a2a9b1;
+  background-color: #f8f9fa;
+  font-size: 14px;
+  margin-left: 20px;
+  padding: 8px;
+}
+
+.infobox h4 {
+  text-align: center;
+  background-color: #e9ecef;
+  margin: -8px -8px 8px -8px;
+  padding: 5px;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: #54595d;
+  padding: 10px;
+  border-top: 1px solid #a2a9b1;
+  background-color: #f8f9fa;
+  margin-top: 20px;
+}
+
+/* rolagem suave para âncoras internas */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  #toggleSidebar {
+    display: block;
+  }
+
+  aside ul {
+    display: none;
+  }
+
+  aside ul.show {
+    display: block;
+  }
+
+  .infobox {
+    float: none;
+    margin: 20px auto;
+  }
+}
+
+/* Padronizar tamanho das imagens do site */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Infobox: imagens fixas (buscar manter proporção, sem cortar) */
+.infobox td.image img,
+.infobox img {
+  width: 100%;
+  height: 90px;        /* menor altura para ficar bem pequeno */
+  object-fit: contain; /* mostra a imagem por inteiro */
+  border-radius: 2px;
+}
+
+/* Bandeira / imagem relacionada (menor) */
+.infobox-image img,
+.related-flag img {
+  width: 120px;
+  height: 72px;        /* menor dimensão */
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+/* Galeria e caixas de imagem: thumbnails pequenos e visíveis por inteiro */
+.gallery .image-box img,
+.image-box img {
+  width: 100%;
+  height: 90px;        /* thumbnail bem menor */
+  object-fit: contain; /* garante visibilidade completa da imagem */
+  border-radius: 4px;
+  background: #f4f4f4; /* opcional: contraste para imagens pequenas */
+}
+
+/* Em telas muito grandes, permitir thumbnails um pouco maiores */
+@media (min-width: 1200px) {
+  .gallery .image-box img {
+    height: 120px;
+  }
+}
+
+/* Em telas pequenas, manter imagem inteira e altura automática */
+@media (max-width: 600px) {
+  .gallery .image-box img,
+  .infobox td.image img,
+  .infobox-image img,
+  .related-flag img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Garantir que imagens em tabelas não ultrapassem a célula */
+td.image img { max-width: 100%; height: auto; }
+
+/* Em telas pequenas, permitir altura automática para não cortar conteúdo */
+@media (max-width: 900px) {
+  .infobox td.image img,
+  .gallery .image-box img,
+  .infobox-image img,
+  .related-flag img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Galeria: paisagens lado a lado */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+
+/* Cada caixa ocupa 1/3 do espaço em telas médias/grandes */
+.gallery .image-box {
+  flex: 1 0 calc(33.333% - 12px);
+  max-width: calc(33.333% - 12px);
+  box-sizing: border-box;
+}
+
+/* Ajuste para duas colunas em telas médias */
+@media (max-width: 900px) {
+  .gallery .image-box {
+    flex: 1 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+}
+
+/* Uma coluna em telas pequenas */
+@media (max-width: 600px) {
+  .gallery .image-box {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* manter a altura pequena e mostrar a imagem inteira (paisagem) */
+.gallery .image-box img {
+  width: 100%;
+  height: 90px;        /* mantém o tamanho que você curtiu */
+  object-fit: contain; /* mostra a imagem inteira, sem cortar */
+  border-radius: 4px;
+  background: #f4f4f4;
+}
+
+/* Mantém a barra lateral fixa na posição atual (coluna esquerda) */
+#sidebar {
+  position: sticky;
+  top: 84px;              /* ajuste se o cabeçalho tiver outra altura */
+  align-self: flex-start; /* garante que fique no início da coluna do container */
+  height: calc(100vh - 84px);
+  overflow: auto;         /* permite rolar dentro da sidebar se necessário */
+  z-index: 20;
+  /* preserve largura existente (se já definida em outro lugar, não precisa repetir) */
+}
+
+/* Em telas pequenas, não fixa para não atrapalhar o layout */
+@media (max-width: 768px) {
+  #sidebar {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* Caixa visual em volta dos links da sidebar */
+.sidebar-box {
+  background: #ffffff;
+  border: 1px solid #d7dce0;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* Espaçamento interno para os itens */
+.sidebar-box ul { margin: 0; padding: 0; list-style: none; }
+.sidebar-box li { margin-bottom: 8px; }
+.sidebar-box a { display: inline-block; width: 100%; padding: 4px 6px; color: #0645ad; text-decoration: none; border-radius: 4px; }
+.sidebar-box a:hover { background: #f2f6fb; }
+
+/* Indica que a imagem é clicável */
+.image-box a,
+.infobox td.image a,
+.infobox-image a,
+.related-flag a {
+  display: block;
+  text-decoration: none;
+}
+
+.image-box img,
+.infobox td.image img,
+.related-flag img {
+  cursor: zoom-in; /* indica que pode abrir/visualizar */
+}
+
+/* Opcional: remover outline azul em cliques (mantendo acessibilidade visual via focus) */
+.image-box a:focus,
+.infobox td.image a:focus {
+  outline: 2px solid rgba(10,132,255,0.25);
+}
